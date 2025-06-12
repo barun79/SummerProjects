@@ -3,8 +3,8 @@ import pandas as pd
 import joblib
 
 # Load model and scaler
-model = joblib.load('./models/loan_approval_model.pkl')
-scaler = joblib.load('./models/scaler.pkl')
+model = joblib.load('./loan_approval_model.pkl')
+scaler = joblib.load('./scaler.pkl')
 
 # Custom CSS
 st.markdown("""
