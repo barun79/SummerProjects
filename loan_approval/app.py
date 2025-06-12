@@ -8,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Build full absolute path to the model file
 model_path = os.path.join(BASE_DIR, 'loan_approval_model.sav')
-scaler_path = os.path.join(BASE_DIR, 'loan_approval_model.sav')
+scaler_path = os.path.join(BASE_DIR, 'scaler.sav')
 
 # Load model and scaler
 model = joblib.load(model_path)
