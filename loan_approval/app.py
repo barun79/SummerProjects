@@ -1,10 +1,18 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import os
+
+# Get absolute path to the folder where app.py is located
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Build full absolute path to the model file
+model_path = os.path.join(BASE_DIR, 'loan_approval_model.sav')
+scaler_path = os.path.join(BASE_DIR, 'loan_approval_model.sav')
 
 # Load model and scaler
-model = joblib.load('loan_approval_model.sav')
-scaler = joblib.load('scaler.sav')
+model = joblib.load(model_path)
+scaler = joblib.load(scaler_path)
 
 # Custom CSS
 st.markdown("""
